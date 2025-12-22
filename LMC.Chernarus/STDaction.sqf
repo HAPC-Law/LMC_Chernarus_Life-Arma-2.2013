@@ -1,0 +1,1 @@
+["cured"] execVM "STD.sqf";
