@@ -1,0 +1,2 @@
+_player = name vehicle player;
+player groupchat format["%1, welcome to [LMC]Chernarus Life, a mission expanded upon by Razgriz and Stealthstick. Check map tabs for rules and more information.", _player];
