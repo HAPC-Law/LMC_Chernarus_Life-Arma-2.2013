@@ -1,0 +1,12 @@
+//caraction = player addaction ["Push Vehicle", "stealthstick\carpushaction.sqf"];
+execVM "stealthstick\fuelrate.sqf";
+//caraction = player addaction ["Push Vehicle", "stealthstick\carpushaction.sqf"];
+//vehicle player removeaction caraction;
+//bunny = 0;
+//hasaction = 0;
+//pushing = 0;
+//performing = 0;
+//cleaningbodies = 0;
+//hasLifeInsurance = 0;
+//cuffing = 0;
+//cuffInVeh = 0;

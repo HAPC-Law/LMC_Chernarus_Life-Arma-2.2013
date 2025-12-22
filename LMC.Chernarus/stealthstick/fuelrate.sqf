@@ -1,0 +1,1 @@
+while {isEngineOn (vehicle player)} do {(vehicle player) setfuel ((fuel vehicle player) - random .003); sleep 2;};

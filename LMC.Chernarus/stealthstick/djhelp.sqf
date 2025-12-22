@@ -1,0 +1,1 @@
+hintc "To peform, scroll, then choose [Perform]. Once you do that, a boombox will appear next to you, and you will be able to DJ using numpad 1-6. Numpad 1-3 are your percussions, and Numpad 4-6 are your sounds to mix in. In order to make a successful track, you need to time your keypresses to be in sync with the audio.";

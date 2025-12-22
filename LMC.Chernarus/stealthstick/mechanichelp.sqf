@@ -1,0 +1,1 @@
+hintc "Payment is determined by your vehicle's damage and whatever the mechanic charges for labor. Payment is taken from your bank account instead of from your person.";
