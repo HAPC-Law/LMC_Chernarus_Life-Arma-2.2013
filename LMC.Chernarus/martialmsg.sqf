@@ -1,0 +1,17 @@
+_martiallaw = [loudspeaker, 'martiallaw', 26 , 1] execvm 'JBOY_soundLoop.sqf';
+_martiallaw = [loudspeaker1, 'martiallaw', 26 , 1] execvm 'JBOY_soundLoop.sqf';
+titleText ['Martial Law has been declared in Chernarus!', 'PLAIN', 2];
+player globalchat 'Martial Law has been declared in Chernarus!';
+sleep 8;
+titleFadeOut 5;
+sleep 6;
+titletext ['Wanted players will be killed on sight for 10 Minutes', 'PLAIN', 2];
+player globalchat 'Wanted players will be killed on sight for 10 Minutes';
+sleep 8;
+titleFadeOut 5;
+sleep 6;
+titletext ['No one else may declare terrorism while marshal law is in effect', 'PLAIN', 2];
+player globalchat 'No one else may declare terrorism while marshal law is in effect';
+sleep 8;
+titleFadeOut 5;
+sleep 6;
