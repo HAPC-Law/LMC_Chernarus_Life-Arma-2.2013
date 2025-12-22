@@ -1,0 +1,60 @@
+_ok = createDialog "Dialog1"
+
+
+;; Verberg het papiertje met dfe code 
+ctrlShow [599, false]; 
+;; Verberg het groene ledje
+ctrlshow [598, false]
+;; Verberg het rode ledje
+ctrlshow [597, false]
+
+_password = Numarray select 1
+
+;; als codefound true is, toon het papiertje en de code. Beide zijn aparte elementen in de dialog. 
+?(codefound) : ctrlShow [599, true]; ctrlSetText [600, format["%1",_password]]
+
+;;;blablabla
+ctrlSetText [999,"Welcome..."]
+~1
+ctrlSetText [999,"Enter your code"]
+~1
+ctrlSetText [999,""]
+
+#start
+;; verberg de ledjes opnieuw van in het begin.(als je een tweede keer de code wil ingeven) 
+ctrlshow [598, false]
+ctrlshow [597, false]
+Keypad_Num = 0
+@(Keypad_Num == MAXNR)
+Keypad_Num = 0
+
+#Passnumloop
+? ctrlText 999 == _password : goto "open"
+ctrlSetText [999,"ACCESS DENIED"]
+playsound "wrongcode"
+
+;; toon het rodeledje
+ctrlshow [597, TRUE]
+~2
+ctrlSetText [999,""]
+goto "start"
+
+#open
+;; toon het groene ledje
+ctrlshow [598, TRUE]
+playsound "codefound"
+ctrlSetText [999,"ACCESS GRANTED"]
+~0.5
+(_this select 0) removeaction (_this select 2)
+~2
+closeDialog 0
+
+
+;; vanaf hier doe je eigenlijk wat je wil... in mijn demomissie gaan de gates open en sluiten ze weer ne 10 seconden.
+
+[button,GateL,GateR,1,2.3] exec "doors\scripted_gate.sqs"
+~10
+[button,GateL,GateR,0,2.3] exec "doors\scripted_gate.sqs"
+
+
+exit

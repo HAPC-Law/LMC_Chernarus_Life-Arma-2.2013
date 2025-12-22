@@ -1,0 +1,10 @@
+_obj = _this select 0
+
+#radius
+@ player distance _obj < 2
+?!alive _obj : _obj removeaction _act;exit
+_act = _obj addaction ["Enter code","pad\numpadCRACK.sqs"]
+@ player distance _obj > 2 
+?!alive _obj : _obj removeaction _act;exit
+_obj removeaction _act
+goto "radius"

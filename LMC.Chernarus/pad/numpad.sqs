@@ -1,0 +1,51 @@
+_obj = _this select 0
+_code = _this select 1
+
+
+[] exec "pad\codepad_init.sqs"
+
+~0.1
+
+
+
+?_code == "-1" : goto "Create_random_digit"
+
+codefound = true
+#Exeaction
+Numarray = []
+~0.5
+Numarray = Numarray + [_obj,_code]
+[_obj] exec "pad\padclick.sqs" 
+
+exit
+
+#Create_random_digit
+_digits = ["1","2","3","4","5","6","7","8","9","0","",""]
+
+
+_countdigits = count _digits
+
+
+_code = ""
+
+_i = 0
+#CYCLE
+_r = random _countdigits
+_r = _r - _r % 1
+
+_digit = _digits select _r 
+
+; You can't put special characters in a string for some reason..., Even between double qoutes.I had to find an alternative,it works great!
+? _r == 10 : _digit = "#"
+? _r == 11 : _digit = "*"
+
+
+_code = _code + format ["%1",_digit]
+_i = _i + 1
+?_i < MAXNR : goto "CYCLE"
+
+
+
+goto "exeaction"
+
+

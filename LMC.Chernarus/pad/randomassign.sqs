@@ -1,0 +1,25 @@
+;________________________
+;::::::::::::::::::::::::
+;
+;Script to assign somebody randomly from the group as keykeeper 
+;autor <Blanco>
+;created 24/12/2003 5:44:42
+;________________________
+;::::::::::::::::::::::::
+
+_grp = _this select 0
+
+_aunits = units _grp
+
+#assign
+
+_r = random count units _grp
+
+_r = _r - _r % 1
+
+Codekeeper = _aunits select _r
+
+
+exit
+
+
